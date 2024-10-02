@@ -9,16 +9,27 @@
 </head>
 <body>
     <header>
-        <nav>
-            <h1>My Portfolio</h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <nav id="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#">My Portfolio</a>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+    
 
     <section id="hero">
         <div class="hero-container">
@@ -34,7 +45,7 @@
     <section id="about">
         <div class="about-container">
             <div class="about-image">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo6Gwq7GpIYFKzCgRkS7x2_F8y_JOFX5J4kj66xyI9iAWETZiqxj6gALxfjto5d5cHTUc&usqp=CAU" alt="Profile Image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo6Gwq7GpIYFKzCgRkS7x2_F8y_JOFX5J4kj66xyI9iAWETZiqxj6gALxfjto5d5cHTUc&usqp=CAU" width="500" alt="Profile Image">
             </div>
             <div class="about-content">
                 <h2>About Me</h2>
@@ -42,13 +53,7 @@
                     Welcome to my creative corner of the web!
 
                     <br>
-                    I’m Riya, a 3rd-year IT student with a passion for web development and design, where functionality meets aesthetic magic. With a keen eye for detail and an obsession for crafting sleek, responsive, and visually captivating websites, I’ve spent the last few years mastering the art of front-end development. My toolkit includes HTML, CSS, JavaScript, Python,  React, and Next.js—essential ingredients for building digital experiences that are not only user-friendly but downright unforgettable.
-                    
-                    As a student who’s constantly absorbing new knowledge, I’m always at the cutting edge, keeping up with the latest trends and evolving my skills. Each project I take on feels like a new adventure—whether it’s creating an elegant portfolio, designing a dynamic web app, or shaping an intricate interface, I strive to blend innovation with practicality.
-                    
-                    Problem-solving is my playground, and I enjoy bringing creative solutions to every challenge, all while making sure the end result looks as good as it works. When I’m not deep in code, you’ll find me exploring fresh design ideas, contributing to open-source projects, or diving into web development resources to keep my mind sharp.
-                    
-                    I believe collaboration is key to innovation, and I’m excited to connect with others who share my passion for building exceptional digital experiences. Thanks for stopping by—take a look around my portfolio, and if you’re interested in working together, let’s build something incredible!
+                    Welcome to my creative space! I'm Riya, a 3rd-year IT student passionate about web development and design. I specialize in building sleek, responsive websites using HTML, CSS, JavaScript, React, Next.js, and Python. With an eye for detail and a love for problem-solving, I create user-friendly digital experiences that blend functionality with aesthetics. Constantly learning and evolving, I stay on top of the latest trends to deliver innovative solutions. Let's connect and create something amazing together!
                 </p>
                 <a href="#contact" class="about-btn">Get In Touch</a>
             </div>
@@ -114,5 +119,24 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        const navLinkItems = document.querySelectorAll('.nav-links a');
+    
+        // Toggle the mobile menu
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    
+        // Close the menu when a link is clicked
+        navLinkItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active'); // Close the menu
+            });
+        });
+    </script>
+    
+    
 </body>
 </html>
