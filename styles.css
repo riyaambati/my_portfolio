@@ -15,11 +15,11 @@
   header {
     background: #000000;
     color: #ffffff;
-    padding: 1rem;
-    position: fixed;
+    /* padding: 1rem; */
+    /* position: fixed; */
     width: 100%;
-    top: 0;
-    z-index: 10;
+    /* top: 0; */
+    /* z-index: 10; */
   }
   
   header nav {
@@ -404,3 +404,190 @@
         grid-template-columns: 1fr;
     }
   }
+
+  /* Navbar General Styling */
+#navbar {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: 590px;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Mobile View Styling */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: 200px;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+}
+
+/* Smaller Mobile View Styling (480px) */
+@media (max-width: 480px) {
+    .logo a {
+        font-size: 20px;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+    }
+}
+
+/* General Hero Section Styling */
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the hero section always takes full screen height */
+    background-image: url('your-image-url.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Hero Text Styling */
+.hero-text {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0; /* Ensure no extra margins */
+}
+
+.hero-subtext {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Button Styling in Hero Section */
+.hero-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #555;
+}
+
+/* Mobile View (Small Screens) */
+@media (max-width: 768px) {
+    #hero {
+        min-height: 90vh; /* Adjust for smaller devices */
+        padding: 20px;
+    }
+
+    .hero-text {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero-subtext {
+        font-size: 1.2rem; /* Adjust subtext size */
+    }
+
+    .hero-btn {
+        font-size: 1rem; /* Adjust button size */
+    }
+}
+
+/* Even Smaller Mobile View (e.g. 480px and below) */
+@media (max-width: 480px) {
+    #hero {
+        min-height: 85vh; /* Further adjust for small screens */
+        padding: 10px;
+    }
+
+    .hero-text {
+        font-size: 2rem; /* Further adjust font size */
+    }
+
+    .hero-subtext {
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        font-size: 0.9rem; /* Smaller button size */
+    }
+}
