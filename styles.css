@@ -407,7 +407,7 @@
 
   /* Navbar General Styling */
 #navbar {
-    background-color: #333;
+    background-color: rgb(18, 17, 17);
     color: #fff;
     position: fixed;
     width: 100%;
